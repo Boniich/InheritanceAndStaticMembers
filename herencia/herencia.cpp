@@ -68,6 +68,10 @@ public:
         number = 10;
     }
 
+    list<User*> getUserList() {
+        return userList;
+    }
+
 };
 
 int main()
@@ -104,6 +108,13 @@ int main()
     cout << "### Mostramos la lista completa de usuarios";
     cout << endl;
     for (auto item : derived.getUserList()) {
+        cout << "El usuario es: " << item->getUsername() << endl;
+    }
+
+    cout << endl;
+    cout << "### Mostramos la lista completa de usuarios desde la clase derivada 2";
+    cout << endl;
+    for (auto item : derivedTwo.getUserList()) {
         cout << "El usuario es: " << item->getUsername() << endl;
     }
 
